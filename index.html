@@ -5670,8 +5670,20 @@ const h=location.hash.slice(1); if(["terapia","prot","schede","dosi","esame","ec
       rebuildIndex(); render(); renderDbState();
     }).catch(function(){});
   }
+  /* indicatore offline */
+  var b=document.createElement("div"); b.id="offbadge";
+  b.style.cssText="position:fixed;left:50%;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:99;font:600 12.5px system-ui,sans-serif;padding:6px 12px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.25);background:#935200;color:#fff;transition:opacity .6s";
+  function show(t,ok){ b.textContent=t; b.style.background=ok?"#1d7550":"#935200"; if(!b.parentNode) document.body.appendChild(b); if(ok) setTimeout(function(){b.style.opacity="0"},4000); }
+  function check(){ if(!window.caches) return; caches.open("pharmalens-v2").then(function(c){return c.match("index.html")}).then(function(r){
+      if(r) show("✓ Pronta anche offline",true); else show("Preparazione offline…",false);
+    }).catch(function(){}); }
   if("serviceWorker" in navigator && location.protocol!=="file:"){
-    window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+    navigator.serviceWorker.register("sw.js").then(function(reg){
+      check();
+      navigator.serviceWorker.addEventListener("message",function(e){ if(e.data==="pronta") show("✓ Pronta anche offline",true); });
+      return navigator.serviceWorker.ready;
+    }).then(function(){ setTimeout(check,1500); }).catch(function(){ show("Offline non disponibile su questo browser",false); });
+    if(navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(function(){});
   }
 })();
 </script>
