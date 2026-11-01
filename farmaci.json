@@ -1,0 +1,25 @@
+{
+ "meta": {
+  "ultimoControllo": "2026-11-01",
+  "nota": "Aggiunto 1 farmaco: orforglipron (Foundayo, GLP-1 orale, parere positivo EMA ottobre 2026). Nessuna nuova nota di sicurezza clinica rilevante per farmaci domiciliari dopo il 25/10 (solo ritiro di alcuni lotti Champix per nitrosammine e note di qualità su prodotti ospedalieri)."
+ },
+ "farmaci": [
+  {
+   "id": "orforglipron",
+   "data": {
+    "aggiornato": "2026-11-01",
+    "cls": "Agonista recettore GLP-1 orale (non peptidico)",
+    "conds": "OBES2 DM2_2",
+    "effetti": "Nausea, vomito, diarrea, stipsi, dolore addominale; possibili pancreatite acuta, calcolosi biliare, ipotensione, tachicardia, danno renale acuto da disidratazione.",
+    "evitare": "Evitare con forti induttori CYP3A4 (rifampicina, fenitoina, carbamazepina, iperico) e forti inibitori CYP3A4+OATP1B (ritonavir); riduce l'efficacia dei contraccettivi orali; dimezzare la simvastatina; non in gravidanza/allattamento né dopo pancreatite.",
+    "flags": "glp1",
+    "fonte": "EMA",
+    "names": [
+     "orforglipron",
+     "Foundayo"
+    ],
+    "note": "GLP-1 in compresse (parere positivo EMA 15/10/2026): in pazienti con vomito/diarrea pensare a disidratazione e danno renale acuto; ipoglicemie se associato a insulina o sulfaniluree; rischio di aspirazione in sedazione/anestesia."
+   }
+  }
+ ]
+}

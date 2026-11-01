@@ -1,0 +1,17 @@
+{
+  "name": "Pharmalens – Decodifica Terapia",
+  "short_name": "Pharmalens",
+  "description": "Dai farmaci del paziente alle patologie probabili e alle allerte, per l'emergenza.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e6f2fb",
+  "theme_color": "#0f4c8a",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

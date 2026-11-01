@@ -1,0 +1,39 @@
+PHARMALENS – APP INSTALLABILE (PWA)
+===================================
+
+CONTENUTO DELLA CARTELLA
+  index.html            l'app
+  farmaci.json          farmaci aggiunti/aggiornati (dal controllo mensile)
+  manifest.webmanifest  nome e icona dell'app
+  sw.js                 funzionamento offline
+  icons/                icone
+
+PUBBLICARE GRATIS SU GITHUB PAGES (una volta sola, circa 10 minuti)
+  1. Crea un account gratuito su https://github.com
+  2. In alto a destra "+" > "New repository". Nome: pharmalens. Lascialo "Public". "Create repository".
+  3. Clicca "uploading an existing file" e trascina TUTTO il contenuto di questa cartella
+     (anche la cartella icons). In basso "Commit changes".
+  4. Vai su Settings > Pages. In "Branch" scegli "main" e "/ (root)", poi "Save".
+  5. Dopo 1-2 minuti l'app è online su: https://TUO-NOME-UTENTE.github.io/pharmalens/
+
+  In alternativa: https://app.netlify.com/drop e trascini la cartella (ancora più veloce).
+
+INSTALLARLA SUL TELEFONO
+  iPhone (Safari):  apri il link > tasto Condividi > "Aggiungi alla schermata Home".
+  Android (Chrome): apri il link > menu ⋮ > "Installa app" (o "Aggiungi a schermata Home").
+  Aprila una volta con la connessione attiva: da quel momento funziona anche offline.
+
+AGGIORNARE I FARMACI
+  Il controllo mensile automatico aggiorna l'app su Claude. Per portare le novità
+  nella versione installata basta sostituire farmaci.json su GitHub
+  ("Add file" > "Upload files" > Commit). Chiedi a Claude un nuovo farmaci.json.
+  Se cambi index.html, in sw.js aumenta il numero di versione (pharmalens-v1 > v2).
+
+COSA NON FUNZIONA FUORI DA CLAUDE
+  Lettura da foto (farmaci, ECG, monitor) e ricerca dei farmaci non trovati usano
+  l'intelligenza artificiale di Claude: nella versione installata non sono attive.
+  Tutto il resto (decodifica terapia, protocolli, dosi, schede, esame obiettivo,
+  glossario, calcolatori) funziona, anche senza rete.
+
+AVVERTENZA
+  Strumento di supporto: non sostituisce il giudizio clinico né le schede tecniche (RCP).
